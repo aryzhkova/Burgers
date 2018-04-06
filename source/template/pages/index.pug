@@ -1,0 +1,169 @@
+extends ../_template
+block variables
+    - var title = 'MrBurger'
+block content
+    .wrapper
+        .maincontent(id="fullpage")
+            section.section.section-hero(id='section0')
+                .section-hero__container
+                    header.header
+                        .container.header-container
+                            .header-left
+                                .logo
+                                    svg.logo-pic(viewBox="0 0 98.265 74.317")
+                                        use(xlink:href=`./assets/img/sprite.svg#logo`)
+                            .header-right
+                                nav.nav.nav_position_header
+                                    include ../common/nav-menu
+                                a.btn.btn_order.btn_order_position_header(href="#page6" title="Заказать")
+                                    span.btn__title.btn__title_order.btn__title_order_position_header Заказать
+                    .section-hero__content
+                        .container.section-hero__content-container
+                            .section-hero__content-left
+                                .section-hero__pic
+                                    img.section-hero__pic-img(src="./assets/img/burger.png" alt="img")
+                            .section-hero__content-right
+                                .section__title.section-hero__title
+                                    span.section__title-text.section-hero__title-text Мы делаем
+                                .section-hero__text Натуральные бургеры
+                    a.arrow.arrow-down(href="#page1" title="Вниз")
+                        svg.arrow__icon.arrow-down__icon(viewBox="0 0 28.685 14.479")
+                            use(xlink:href=`./assets/img/sprite.svg#arrow-scroll`)
+            section.section.section-best(id='section1')
+                .container.section-best-container
+                    .section__title.section-best__title
+                        span.section__title-text.section-best__title-text Мы лучшие
+                    table.table
+                        thead
+                        tfoot
+                        tbody
+                            tr.tr.tr-icons
+                                td.td
+                                    svg.icon-meat(viewBox="0 0 96.428 89.246")
+                                        use(xlink:href=`./assets/img/sprite.svg#meat`)
+                                td.td
+                                    svg.icon-hand(viewBox="0 0 73 85.875")
+                                        use(xlink:href=`./assets/img/sprite.svg#hand`)
+                                td.td
+                                    svg.icon-natural(viewBox="0 0 88 75.534")
+                                        use(xlink:href=`./assets/img/sprite.svg#natural`)
+                            tr.tr.tr-title
+                                td.td 100% свежее мясо
+                                td.td Ручная сборка
+                                td.td Натуральные ингредиенты
+                            tr.tr.tr-desc
+                                td.td Lorem ipsum dolor sit amet.
+                                td.td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, molestiae.
+                                td.td Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+
+            section.section.section-burgers(id='section2')
+                .container.slider-container
+                    .slider
+                        include ../common/burger-slider
+                        a.arrow.arrow-prev(id="moveLeft" href="#" title="Назад")
+                            svg.arrow__icon.arrow-prev__icon(viewBox="0 0 28.685 14.479")
+                                use(xlink:href=`./assets/img/sprite.svg#arrow-scroll`)
+                        a.arrow.arrow-next(id="moveRight" href="#" title="Вперед")
+                            svg.arrow__icon.arrow-next__icon(viewBox="0 0 28.685 14.479")
+                                use(xlink:href=`./assets/img/sprite.svg#arrow-scroll`)
+            section.section.section-team(id='section3')
+                .section-team__content
+                    .section__title.section-team__title Kоманда
+                    include ../common/team-accordion
+            section.section.section-menu(id='section4')
+                .section__title.section-menu__title Меню
+                include ../common/menu-accordion
+            section.section.section-reviews(id='section5')
+                include ../common/reviews
+            section.section.section-order(id='section6')
+                .section-order__content
+                    .container
+                        .section__title.section-order__title Закажите доставку
+                        form.form-order(id="form" action="#")
+                            .form-order__col
+                                .form-order__row.form-order__row--1
+                                    label.form-order__label(for="name")
+                                        span.form-order__label-title Имя
+                                        input.form-order__input(id="name" type="text" name="name")
+                                    label.form-order__label(for="tel")
+                                        span.form-order__label-title Телефон
+                                        input.form-order__input(id="tel" type="tel" name="tel")
+                                .form-order__row.form-order__row--2
+                                    label.form-order__label(for="street")
+                                        span.form-order__label-title Улица
+                                        input.form-order__input(id="street" type="text" name="street")
+                                .form-order__row.form-order__row--3
+                                    label.form-order__label(for="house")
+                                        span.form-order__label-title Дом
+                                        input.form-order__input(id="house" type="text" name="house")
+                                    label.form-order__label(for="building")
+                                        span.form-order__label-title Корпус
+                                        input.form-order__input(id="building" type="text" name="building")
+                                    label.form-order__label(for="flat")
+                                        span.form-order__label-title Квартира
+                                        input.form-order__input(id="flat" type="text" name="flat")
+                                    label.form-order__label(for="floor")
+                                        span.form-order__label-title Этаж
+                                        input.form-order__input(id="floor" type="text" name="floor")
+                            .form-order__col
+                                .form-order__row.form-order__row--4
+                                    label.form-order__label(for="text")
+                                        span.form-order__label-title Комментарий
+                                        textarea.form-order__ta(id="text" rows="5" placeholder="" name ="text")
+                                .form-order__row.form-order__row--5
+                                    label.form-order__label
+                                        input.radio(type="radio" name="radio")
+                                        span.fake-style
+                                        span.form-order__label-title Потребуется сдача
+                                    label.form-order__label
+                                        input.radio( type="radio" name="radio" checked=true)
+                                        span.fake-style
+                                        span.form-order__label-title Оплата по карте
+                                .form-order__row.form-order__row--6
+                                    label.form-order__label
+                                        input.checkbox(type="checkbox" name ="check")
+                                        span.fake-style
+                                        span.form-order__label-title Не перезванивать
+                                .form-order__row.form-order__row--7
+                                    a.btn.btn_order( id="order" href="#" title="Заказать")
+                                        span.btn__title.btn__title_order Заказать
+                                    input.btn.btn-reset(type="reset" value="Очистить")
+            section.section.section-map(id='section7')
+                .section-map__content
+                    .map(id="map"  )
+                footer.footer
+                        .container.footer-container
+                            .footer-left
+                                .footer__adress Санкт-Петербург, ул. Бабушкина, д 12/1, 15
+                                .footer__phone
+                                    svg.footer__phone-icon(viewBox="0 0 11 11")
+                                        use(xlink:href=`./assets/img/sprite.svg#phone`)
+                                    span.footer__phone-text +7(812)377-13-71
+                            .footer-right
+                                ul.socials
+                                    li.socials__item
+                                        a.socials__link(href="#" title="vk")
+                                            svg.socials__icon.socials__icon--vk(viewBox="0 0 126 72" fill="#585858")
+                                                use(xlink:href=`./assets/img/sprite.svg#vk`)
+                                    li.socials__item
+                                        a.socials__link(href="#" title="fb")
+                                            svg.socials__icon.socials__icon--fb( viewBox="0 0 36.711 36.711" )
+                                                use(xlink:href=`./assets/img/sprite.svg#fb`)
+                                    li.socials__item
+                                        a.socials__link(href="#" title="inst")
+                                            svg.socials__icon.socials__icon--inst(viewBox="0 0 36.663 36.664")
+                                                use(xlink:href=`./assets/img/sprite.svg#inst`)
+                                    li.socials__item
+                                        a.socials__link(href="#" title="twitter")
+                                            svg.socials__icon.socials__icon--twitter(viewBox="0 0 37.453 31.21")
+                                                use(xlink:href=`./assets/img/sprite.svg#twitter`)
+        include ../common/fixed-menu
+        .fancybox.popup(id="popupReview" style="display:none;")
+            .popup__title
+            .popup__text
+            a.popup__btn-close(href="#" title="close")
+                svg.popup__btn-close-icon(viewBox="0 0 14.988 14.988")
+                    use(xlink:href=`./assets/img/sprite.svg#close`)
+
+

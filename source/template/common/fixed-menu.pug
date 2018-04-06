@@ -1,0 +1,4 @@
+ul.fixed-menu(id="menu")
+  each page,index in ['page0', 'page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7']
+        li(class = (index==0 ? '.fixed-menu__item.active':'fixed-menu__item'),data-menuanchor = page)
+            a.fixed-menu__link(href="#"+page)

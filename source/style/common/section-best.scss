@@ -1,0 +1,54 @@
+.section-best{
+  background: url("../img/bg/best_bg.jpg") center no-repeat;
+  background-size: cover;
+}
+.section-best-container{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.section-best__title{
+  position: relative;
+  color:$black;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.table{
+  border-spacing: 15px;
+}
+.td{
+  width:300px;
+}
+.tr-icons .td{
+  vertical-align: bottom;
+  text-align: center;
+}
+.icon{
+  &-meat{
+    width:96.428px;
+    height:89.246px;
+  }
+  &-hand{
+    width:73px;
+    height:85.875px;
+  }
+  &-natural{
+    width:88px;
+    height:75.534px;
+  }
+}
+.tr-title .td{
+  text-align: center;
+  font-size: 24.12px;
+  font-family: 'Lifehack Medium';
+  color:$black;
+  vertical-align: top;
+}
+.tr-desc .td{
+  font-size: 14px;
+  font-family: 'Ubuntu Light';
+  text-align: center;
+  color: #828485;
+}
+

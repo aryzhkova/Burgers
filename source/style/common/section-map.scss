@@ -1,0 +1,86 @@
+.section-map__content{
+  height: 100%;
+  padding-bottom: 100px;
+}
+.map{
+  position: relative;
+  height:100%;
+}
+.footer{
+  position: relative;
+  height: 100px;
+  margin-top: -100px;
+  background: url('../img/bg/footer_bg.jpg') center no-repeat;
+  background-size: cover;
+  &-container{
+    @extend %clearfix;
+  }
+  &-left{
+    position: relative;
+    width:50%;
+    float: left;
+  }
+  &-right{
+    position: relative;
+    width:50%;
+    float: right;
+  }
+  &__adress{
+    position: relative;
+    font-family: 'Ubuntu Light';
+    color: $white;
+    margin-bottom: 10px;
+  }
+  &__phone{
+    position: relative;
+    &-icon{
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width:11px;
+      height: 11px;
+      margin-right: 10px;
+    }
+    &-text{
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      font-family: 'Ubuntu-Bold';
+      color:#e45028;
+    }
+  }
+}
+
+.socials{
+  position: relative;
+  padding:0;
+  margin:0;
+  list-style: none;
+  text-align: right;
+  &__item{
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  &__link{
+    position: relative;
+    display: block;
+    width: 23px;
+    height: 20px;
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    fill: #585858;
+    transition: 0.3s;
+    max-width: 100%;
+    max-height: 100%;
+    &:hover {
+      fill: $white;
+    }
+  }
+}

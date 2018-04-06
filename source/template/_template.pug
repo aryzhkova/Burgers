@@ -1,0 +1,20 @@
+block variables
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(content="" name="author")
+    meta(content="" name="description")
+    meta(content="" name="keywords")
+    meta(content="width=device-width, initial-scale=1.0" name="viewport")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    link(rel="shortcut icon" type="image/x-icon" sizes="16x16" href="./assets/img/icon/favicon.ico")
+    link(rel='stylesheet' href='./assets/css/foundation.css')
+    link(rel='stylesheet' href='./assets/css/app.css')
+    script(src='./assets/js/foundation.js')
+  body
+    block content
+    script(src='./assets/js/app.js' defer)
+    script(src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU&onload=init" type="text/javascript" )

@@ -1,0 +1,115 @@
+.reviews__list{
+  position: relative;
+  height: 100%;
+  padding: 0;
+  margin:0;
+  list-style: none;
+}
+.reviews__item{
+  position: relative;
+  float:left;
+  width: 25%;
+  height: 50%;
+
+}
+.review{
+  position: relative;
+  height:100%;
+
+  &__foto{
+    position: relative;
+    width:100%;
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__hover{
+    position: absolute;
+    width:100%;
+    min-width: 275px;
+    height: 100%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) scale(0.9);
+    padding: 50px 20px;
+    opacity: 0;
+    transition: 0.5s;
+    color:$white;
+    background: rgba(20, 20, 20, 0.7) ;
+    &-title{
+      position: relative;
+      font-family: 'Gagalin-Regular';
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 235px;
+      text-overflow: ellipsis;
+    }
+    &-text{
+      position: relative;
+      font-family: 'Ubuntu Light';
+      line-height: 24px;
+      margin-bottom: 20px;
+      max-height: 170px;
+      overflow: hidden;
+    }
+  }
+  &:hover .review__hover{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.btn-review{
+  background: #2f3234;
+  color: $white;
+  transition: background 0.3s;
+  &:hover{
+    background: #1f2122;
+  }
+}
+
+.popup{
+  max-width: 400px;
+}
+
+.popup__title {
+  position: relative;
+  width:auto;
+  font-family: 'Gagalin-Regular';
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.popup__btn-close {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top: 0;
+  opacity: .7;
+  &-icon{
+    position:absolute;
+    display: block;
+    top:0;
+    right:0;
+    left:0;
+    bottom: 0;
+    margin:auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+}
+
+.popup__text {
+  position: relative;
+  max-height: 400px;
+  font-size: 14px;
+  font-family: 'Ubuntu-Light';
+  overflow: auto;
+}

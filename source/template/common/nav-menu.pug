@@ -1,0 +1,32 @@
+ul.nav__list.nav__list_position_header
+    -
+        menuItems=[
+        {
+            page: 'page1',
+            title: 'О нас'
+        },
+        {
+            page: 'page2',
+            title: 'Бургеры'
+        },
+        {
+            page: 'page3',
+            title: ' Команда'
+        },
+        {
+            page: 'page4',
+            title: 'Меню'
+        },
+        {
+            page: 'page5',
+            title: 'Отзывы'
+        },
+        {
+            page: 'page7',
+            title: 'Контакты'
+        }
+        ]
+    each menuItem in menuItems
+        li.nav__item.nav__item_position_header
+            a.nav__link.nav__link_position_header(href="#"+menuItem.page, title=menuItem.title)
+                span.nav__link-title.nav__link-title_position_header=menuItem.title

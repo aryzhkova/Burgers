@@ -1,0 +1,78 @@
+.section-menu{
+  background: url('../img/bg/menu_bg.jpg') center no-repeat;
+  background-size: cover;
+}
+.section-menu__title{
+  position: absolute;
+  top:10%;
+  left:10%;
+  color: $white;
+}
+.menu{
+  position:absolute;
+  right:0;
+  top:0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0;
+}
+.menu__item{
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  height: 100%;
+  @extend %clearfix;
+}
+.menu__link{
+  position: relative;
+  float:left;
+  width:80px;
+  height: 100%;
+  text-decoration: none;
+  color:$white;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-family: 'Gagalin-Regular';
+  background-size: cover;
+  &-title{
+    display: block;
+    position: relative;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    top:50%;
+  }
+  &--meat{
+    //background: url('../img/bg/meats.jpg') center no-repeat ;
+
+  }
+  &--vegan{
+    //background: url('../img/bg/vegans.jpg') center no-repeat ;
+
+  }
+  &--diets{
+   // background: url('../img/bg/diets.jpg') center no-repeat ;
+
+  }
+}
+.menu__info{
+  position: relative;
+  float: left;
+  height: 100%;
+  background: rgba(47, 50, 52, 0.93);
+  color: $white;
+  font-family: 'Ubuntu Light';
+  overflow: hidden;
+  max-width: 0;
+  transition: max-width 1s;
+  p{
+    position: relative;
+    height:100%;
+    padding:60px 35px;
+    width:480px;
+    min-height: 500px;
+    overflow: auto;
+    line-height: 24px;
+  }
+}

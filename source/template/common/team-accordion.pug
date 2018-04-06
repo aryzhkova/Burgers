@@ -1,0 +1,40 @@
+ul.team
+    -
+        teamItems =[
+        {
+           name: "Дэниэл Редклиф",
+            position: "Оператор",
+            desc: "С радостью поможет подобрать идеальный бургер и сделать заказ",
+            pic:"url(./assets/img/foto.png)"
+
+        },
+        {
+            name: "Дэниэл Редклиф",
+            position: "Оператор",
+            desc: "С радостью поможет подобрать идеальный бургер и сделать заказ",
+            pic:"url(./assets/img/foto.png)"
+        },
+        {
+            name: "Дэниэл Редклиф",
+            position: "Оператор",
+            desc: "С радостью поможет подобрать идеальный бургер и сделать заказ",
+            pic:"url(./assets/img/foto.png)"
+        },
+        {
+            name: "Дэниэл Редклиф",
+            position: "Оператор",
+            desc: "С радостью поможет подобрать идеальный бургер и сделать заказ",
+            pic:"url(./assets/img/foto.png)"
+        }
+        ]
+    each teamItem,index in teamItems
+        li(class= (index==1 ? 'team__item active': 'team__item'))
+            a.team__link(href="#", title=teamItem.name)
+                span.team__link-title=teamItem.name
+            .team__info
+                .team__info-left
+                    .team__pic(style="background-image:"+teamItem.pic)
+                .team__info-right
+                    .team__title=teamItem.position
+                    .team__descr=teamItem.desc
+

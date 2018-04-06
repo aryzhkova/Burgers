@@ -1,0 +1,105 @@
+.section-team{
+  background: url('../img/bg/team_bg.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.section-team__content{
+  position: absolute;
+  top:0;
+  left:50%;
+  right:0;
+  bottom: 0;
+  background: rgba(47, 50, 52, 0.93);
+  padding: 80px 80px 80px 60px;
+}
+.section-team__title{
+  color:$orange;
+  margin-bottom: 70px ;
+}
+.team{
+  position: relative;
+  max-width: 400px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 14px;
+  text-transform: none;
+  color:$white;
+}
+.team__item{
+  position: relative;
+  margin-bottom: 20px;
+  &.active .team__link:before{
+    transform: rotate(180deg);
+    transition: transform 1s;
+  }
+  &.active .team__link{
+    color: $orange;
+    transition: color 1s;
+  }
+
+}
+.team__link{
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: color 1s;
+  max-width:200px;
+  color:$white;
+  margin-bottom: 10px;
+  &-title{
+    text-transform: uppercase;
+    font-family: 'Gagalin-Regular';
+  }
+  &:before{
+    display: block;
+    content: '';
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    width:0;
+    border-top: 7px solid $orange;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 0px solid transparent;//???????????
+    transition: transform 1s;
+  }
+}
+.team__info{
+  position: relative;
+  @extend %clearfix;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s;
+  &-left{
+    position: relative;
+    float:left;
+    width:40%;
+  }
+  &-right{
+    position: relative;
+    float:right;
+    width:60%;
+  }
+}
+.team__pic{
+  position: relative;
+  background: $white  center no-repeat;
+  width: 100px;
+  height: 101px;
+  background-size: cover ;
+  border-radius: 50%;
+  margin: auto;
+}
+.team__title{
+  position: relative;
+  text-align: left;
+  font-family: 'Ubuntu-Bold';
+  margin-bottom: 20px;
+}
+.team__descr{
+  position: relative;
+  font-family: 'Ubuntu Light';
+}
